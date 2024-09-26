@@ -1,0 +1,210 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #517497;
+    /* Cor de fundo suave */
+    color: #191c1f;
+    /* Cor do texto */
+    line-height: 1.6;
+    /* Melhora a legibilidade */
+}
+
+header {
+    background-color: #05192e;
+    /* Azul moderno */
+    color: #fff;
+    /* Texto branco */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* Necessário para o posicionamento do menu */
+    z-index: 1000;
+    /* Para garantir que o cabeçalho esteja sempre em cima */
+}
+
+
+
+/*Título do Site */
+
+.header-title {
+    font-family: 'Arial', cursive;
+    font-size: 3em;
+    /* Tamanho grande e destacado */
+    color: #2533b1;
+    /* Cor escura e neutra */
+    letter-spacing: 0.2rem;
+    /* Espaçamento entre as letras para dar elegância */
+
+    text-shadow: 2px 2px 5px rgb(247, 242, 242);
+    /* Sombra leve para profundidade */
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2em;
+        /* Tamanho reduzido em dispositivos menores */
+    }
+}
+
+
+
+/* Links do Menu */
+
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    display: block;
+    /* Mostrar ícone de menu em todas as telas */
+    cursor: pointer;
+    margin: 20px auto;
+    width: 30px;
+    height: 20px;
+}
+
+.menu-icon span {
+    display: block;
+    background: #fff;
+    height: 3px;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    display: none;
+    /* Esconde o menu por padrão */
+    flex-direction: column;
+    /* Para ambas as telas, o menu ficará em coluna */
+    align-items: center;
+    /* Centraliza os itens do menu */
+    position: absolute;
+    /* Posicionamento absoluto */
+    top: 10vh;
+    /* Abaixo do cabeçalho */
+    left: 0;
+    right: 0;
+    background-color: #05192e;
+    /* Cor do fundo do menu */
+}
+
+.menu-items li {
+    margin: 10px 0;
+    /* Espaçamento entre os itens do menu */
+}
+
+.menu-items a {
+    color: #fff;
+    /* Links brancos */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    font-weight: bold;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+    /* Sublinhar no hover */
+}
+
+main {
+    max-width: 60%;
+    /* Largura máxima de 60% */
+    margin: 2vh auto;
+    /* Centraliza o main */
+    padding: 20px;
+    background-color: #a2aebb;
+    /* Fundo branco para o conteúdo */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+
+}
+
+h2 {
+    color: #4b2e09;
+    /* Cor dos títulos */
+}
+
+h2 {
+    margin-top: 20px;
+    /* Espaçamento acima dos subtítulos */
+}
+
+p {
+    margin: 10px 0;
+    /* Espaçamento entre os parágrafos */
+}
+
+footer {
+    background-color: #343a40;
+    /* Cor do rodapé */
+    color: #fff;
+    /* Texto branco */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    /* Posiciona o rodapé corretamente */
+    bottom: 0;
+    /* Mantém o rodapé na parte inferior */
+    width: 100%;
+    /* Largura total */
+    height: 12%;
+}
+
+/* Efeito de transição do menu */
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+    /* Rotaciona a primeira barra */
+    margin: 0;
+    /* Remove a margem */
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+    /* Oculta a segunda barra */
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    /* Rotaciona a terceira barra */
+    margin: 0;
+    /* Remove a margem */
+}
+
+/* Quando o menu está ativo (ícone clicado) */
+.menu-icon.active+.menu-items {
+    display: flex;
+    /* Mostrar o menu ao clicar */
+}
+
+
+/* Estilização dos Versículos */
+.verse-number {
+    font-size: smaller;
+    /* Tamanho da fonte menor do que o texto normal */
+    font-style: italic;
+    /* Aplica estilo itálico ao texto */
+    color: #3e50b4;
+    /* Cor suave para os versículos */
+    vertical-align: super;
+    /* Posiciona o texto como sobrescrito */
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    main {
+        max-width: 98%;
+        /* Largura de 90% em dispositivos móveis */
+    }
+}
